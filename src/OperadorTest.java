@@ -16,4 +16,16 @@ public class OperadorTest {
 
     // TODO: criar 2 testes unitários (AAA + mensagem na asserção)
     // TODO: um deles deve testar registrarPagamento
+
+    void exemploQuantidade() {
+        ColetorDados b = new ColetorDados("Joao", "C002");
+        double turnos = b.addTurnoExtra(0.0);
+        assertEquals(0.0, turnos, 0.001, "Exemplo se qunatidade for 0")
+    }
+
+    void exemploPagamento() {
+        ColetorDados a = new ColetorDados("Pedro", "C003");
+        double turnos = a.registrarPagamento();
+        assertEquals(3100.0, turnos, 0.001, "Testando registrar pagamentos sem turnos extras")
+    }
 }

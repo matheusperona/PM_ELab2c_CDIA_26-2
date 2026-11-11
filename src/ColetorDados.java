@@ -21,13 +21,20 @@ public class ColetorDados extends Operador {
     public double addTurnoExtra(double quantidade) {
         // TODO: se quantidade <= 0, não altera e devolve turnosExtras atual
         // TODO: soma quantidade, sem ultrapassar MAX_TURNOS; devolve o novo total
+        if (quantidade <= 0){
+            return turnosExtras;
+        }
+        if (quantidade < MAX_TURNOS){
+            return (turnosExtras + quantidade);
+        }
         return 0.0;
     }
 
     @Override
     public double registrarPagamento() {
         // TODO: calcular total, armazenar, zerar turnosExtras e devolver
-        return 0.0;
+
+        return (SALARIO + turnosExtras());
     }
 
     @Override

@@ -19,6 +19,11 @@ public class EspecialistaLimpeza extends Operador {
      */
     private double valorBonus() {
         // TODO: percorrer lotes e acumular o bônus dos elegíveis
+        for(LoteDados : lotes){
+            if (finalizar() < TEMPO_BONUS){
+                return (SALARIO * BONUS);
+            }
+        }
         return 0.0;
     }
 
@@ -33,7 +38,7 @@ public class EspecialistaLimpeza extends Operador {
     @Override
     public double registrarPagamento() {
         // TODO: calcular total, armazenar em ultimoPagamento e devolver
-        return 0.0;
+        return (SALARIO + BONUS);
     }
 
     @Override

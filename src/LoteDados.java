@@ -24,7 +24,11 @@ public class LoteDados {
      */
     public int diasAposFinalizacao() {
         // TODO: se finalizadoEm == null, devolver -1; senão, dias entre finalizadoEm e LocalDate.now()
-        return 0;
+        if (finalizadoEm == null){
+            return -1;
+        }
+        
+        return (LocalDate.now() - finalizadoEm);
     }
 
     public String getNome() { return nome; }
